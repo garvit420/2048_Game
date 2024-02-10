@@ -1,0 +1,177 @@
+/* Styles for the game board */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-size), var(--cell-size));
+    grid-template-rows: repeat(var(--grid-size), var(--cell-size));
+    background-color: #CCC;
+    gap: var(--cell-gap);
+    border-radius: 1vmin;
+    padding: var(--cell-gap);
+    position: relative;
+}
+
+/* Styles for each cell in the game board */
+.cell {
+    background-color: #AAA;
+    border-radius: 1vmin;
+}
+
+/* Styles for the game tiles */
+.tile {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background-color: red;
+    border-radius: 1vmin;
+    top: calc(var(--y) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+    left: calc(var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+    font-weight: bold;
+    background-color: hsl(200, 50%, var(--background-lightness));
+    color: hsl(200, 25%, var(--text-lightness));
+    animation: show 200ms ease-in-out;
+    transition: 100ms ease-in-out;
+}
+
+/* Animation for showing tiles */
+@keyframes show {
+    0% {
+    opacity: .5;
+    transform: scale(0);
+    }
+}
+
+/* Styles for the body of the document */
+body {
+    color: #776e65;
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    background-image: url('d3.jpg');
+}
+
+/* Styles for anchor tags */
+a {
+    color: #776e65;
+}
+
+/* Styles for horizontal rule */
+hr {
+    border: none;
+    border-bottom: 1px solid #d8d4d0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+/* Styles for the main container */
+.container {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/* Styles for the heading section */
+.heading {
+    height: 112px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styles for the title element */
+.title {
+    font-size: 80px;
+    margin: 0;
+}
+
+/* Styles for the score container */
+.score-container {
+    display: flex;
+    margin: 0;
+}
+
+/* Styles for the score box */
+.score-box {
+    margin-top: 8px;
+    height: 30%;
+    background-color: #BBADA0;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    top: 0;
+    padding: 15px 25px;
+    font-weight: bold;
+}
+
+/* Styles for the max score */
+#max-score {
+    margin-left: 5px;
+}
+
+/* Styles for the score type */
+.score-type {
+    color: #eee4da;
+    width: 100%;
+    font-size: 13px;
+    padding-bottom: 3px;
+}
+
+/* Styles for the section above the game board */
+.above-game {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styles for the restart button */
+.restart-button {
+    background: #8f7a66;
+    border-radius: 3px;
+    padding: 0 20px;
+    color: #f9f6f2;
+    height: 40px;
+    line-height: 42px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Styles for the game container */
+.game-container {
+    margin-top: 40px;
+    position: relative;
+    padding: 15px;
+    background: #bbada0;
+    border-radius: 6px;
+    width: 500px;
+    height: 500px;
+    box-sizing: border-box;
+}
+
+/* Styles for the "How to play" section */
+.how-to-play {
+    margin-bottom: 10px;
+    line-height: 1.65;
+    margin-top: 30px;
+    border-radius: 1px;
+}
+
+/* Styles for the footer section */
+footer {
+    text-align: center;
+}
+
+/* Styles for the "Thank You" message */
+.thank-you {
+    font-weight: bold;
+}
+
+/* Styles for the salutation */
+.salutation {
+    font-size: 13px;
+    color: #BBADA0;
+    margin-bottom: 30px;
+}
