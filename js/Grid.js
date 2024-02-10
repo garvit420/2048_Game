@@ -1,6 +1,6 @@
 // Constants for grid size, cell size, and cell gap
 const GRID_SIZE = 4
-const CELL_SIZE = 10
+const CELL_SIZE = 12
 const CELL_GAP = 2
 
 // Class representing the game grid
